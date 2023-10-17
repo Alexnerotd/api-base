@@ -36,7 +36,7 @@ class MyUser(AbstractBaseUser):
     email = models.EmailField("Correo electronico", max_length=254, unique=True)
     name = models.CharField("Nombre completo", max_length=100, null=True, blank=True)
     
-    img_perfil = models.ImageField("Imagen de perfil", upload_to="/media")
+    img_perfil = models.ImageField("Imagen de perfil", upload_to="media")
     created_at = models.DateTimeField(auto_now_add=True)
 
     is_admin = models.BooleanField(default=False)
