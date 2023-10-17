@@ -36,7 +36,7 @@ BASE_APPS = [
 
 LOCAL_APPS = [
     'core',
-    'account',
+    'admin',
     'user',
     'blog',
 ]
