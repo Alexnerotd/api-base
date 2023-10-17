@@ -36,4 +36,4 @@ class MyUserSerializerDELETE(ModelSerializer):
 
     class Meta:
         model = MyUser
-        fields = "__all__"
+        fields = ['username', 'email', 'name', 'img_perfil']
