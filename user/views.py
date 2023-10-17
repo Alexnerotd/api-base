@@ -15,6 +15,16 @@ from .serializers import *
 
 class Register(APIView):
 
+    def get(self, format = None):
+
+        format = {
+            "username":"data(required)",
+            "email":"data(required)",
+            "password":"data(required)",
+            "name":"data(required)",
+        }
+        return Response(format, status=status.HTTP_200_OK)
+
 
     def post(self, request, format = None):
         user_serializer = MyUserSerializerPOST(data=request.data)
