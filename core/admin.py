@@ -3,5 +3,6 @@ from user.models import MyUser
 
 # Register your models here.
 
-
-admin.site.register(MyUser)
+@admin.register(MyUser)
+class AdminBase(admin.ModelAdmin):
+    list_display = ('id', 'username')

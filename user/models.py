@@ -63,3 +63,8 @@ class MyUser(AbstractBaseUser):
     def is_staff(self):
         return self.is_admin
     
+
+    class Meta:
+        ordering = ['id']
+        verbose_name = 'User'
+        verbose_name_plural = 'Users'
